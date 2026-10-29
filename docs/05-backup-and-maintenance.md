@@ -72,6 +72,22 @@ overwrite those.
 | Hand-added file on `minija-web` disappeared | Publii owns that branch and deletes unknown files | Re-add it via Publii **File Manager** |
 | Search returns nothing | Static Search plugin disabled, or theme search option off | Tools & Plugins → Static Search; Theme → Custom settings → Search |
 | Post shows in preview, not on the live site | Saved as draft, or not synced | Publish, then sync |
+| Every image is rejected: "…is not a valid supported image. Choose a JPG, PNG…" even for a normal JPG | The **Sharp** resize engine crashes when decoding images on some Linux/Electron builds, so Publii reports a format error that is not true | **App settings → Image resize engine → Jimp → Save settings**, then retry the upload |
+
+### If images keep failing
+
+The message above is spurious — the file is fine. Confirm it by watching the terminal where Publii was
+started: `[SharpElectronLinux] Warning: Binaries provided by Electron...` followed by no further output
+means the image worker died.
+
+The fix is the setting Publii's own note describes: **App settings → Image resize engine → Jimp**.
+
+- Jimp is pure JavaScript: slower per image, but it does not crash. On a 12-megapixel photo it is a
+  second or two — irrelevant for a recipe site.
+- The engine can also be set by editing `~/Documents/Publii/config/app-config.json` while Publii is
+  closed: `"resizeEngine": "jimp"`.
+- Switching engines does not touch existing images; only new uploads use it.
+- Leave **Convert images to WebP** off while on Jimp unless you want the wasm encoder involved.
 
 ## 6. What this setup cannot do (known, accepted)
 

@@ -15,6 +15,8 @@ Click the gear icon (top right) to open post settings:
 - **Featured image** — the one photo that shows on the cards. Guide: at least 1200 px wide,
   JPG, ~85 % quality, under 500 KB. **Always fill in Alt text** ("porotta and beef curry in a
   black bowl") — it is what blind visitors and search engines read.
+  If *every* photo is rejected as an unsupported format, that is the resize engine, not your
+  file — see [05-backup-and-maintenance.md](05-backup-and-maintenance.md#if-images-keep-failing).
 - **Tags** — one *course* tag (`Main`), optionally one *cuisine* tag (`Kerala`).
 - **Slug** — auto-generated from the title; leave it alone.
 - **Excerpt** — first one or two sentences, or insert a **read-more** marker where the preview
