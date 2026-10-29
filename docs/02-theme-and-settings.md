@@ -4,12 +4,16 @@ Do this once, after [01-install-publii.md](01-install-publii.md). About 20 minut
 
 ## 1. Install the Taste theme
 
+This is the theme-selection step that [doc 01 §2](01-install-publii.md#there-is-no-theme-choice-here) skips: the new site starts on Publii's built-in default theme, and you replace it here.
+
 1. Download the theme zip: <https://marketplace.getpublii.com/themes/taste/> →
    **Download** (`taste_3.3.0.0.zip`). Free, unlimited use.
-2. In Publii: **Theme** → **Add new theme** → upload the zip → **Activate**.
+2. In Publii: **Theme** → **Add new theme** → upload the zip → **Activate**. Taste becomes the
+   site's active theme, replacing the default; posts, pages and tags are untouched.
 
 Taste is a card-based theme built for food and creative blogs; its own demo is a recipe site.
-It requires Publii 0.46 or newer.
+It requires Publii 0.46 or newer. Switching themes later is safe — content lives separately —
+but theme *settings* and menu assignments do not carry across themes, so settle on Taste now.
 
 ## 2. Website URL — the setting that breaks sites
 
