@@ -1,0 +1,11 @@
+# Publii site data lives in ~/Documents/Publii/sites, not here. These patterns are a
+# guard in case it is ever copied into this repo.
+db.sqlite
+output/
+preview/
+*.tar
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*~
